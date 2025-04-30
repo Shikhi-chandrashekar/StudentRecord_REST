@@ -1,0 +1,33 @@
+<%- include("includes/head.ejs") %>
+
+        <body>
+            <div class="record-details">
+                <h1>Details for <%= record.name %></h1>
+                <ul>
+                    <li><strong>USN:</strong> <%= record.usn %></li>
+                    <li><strong>Email:</strong> <%= record.email %></li>
+                    <li><strong>Marks:</strong> <%= record.marks %></li>
+                    <li><strong>Status:</strong> <%= record.status %></li>
+                </ul>
+        
+                <!-- Buttons -->
+                <div class="action-buttons">
+                   
+                    <form method="post" action="/records/<%= record.id %>/edit">
+                        <button class="btn edit-btn">Edit</button>
+                    </form>
+        
+               
+                    <form method="post" action="/records/<%= record.id %>?_method=DELETE">
+                        <button class="btn delete-btn" onclick="return confirm('Are you sure you want to delete this record?');">Delete</button>
+                    </form>
+                </div>
+        
+                <a href="/records" class="back-link">← Back to All Records</a>
+            </div>
+    
+
+        </body>
+        </html>
+        
+  

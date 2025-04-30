@@ -1,0 +1,22 @@
+<%- include("includes/head.ejs") %>
+
+<body class="form-body">
+    <div class="form-container">
+        <h2>Add New Record</h2>
+        <form action="/records" method="POST">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="number" name="usn" placeholder="USN" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="number" name="marks" placeholder="Marks" required />
+            <select name="status" required>
+                <option value="" disabled selected>Select Status</option>
+                <option value="pass">Pass</option>
+                <option value="fail">Fail</option>
+            </select>
+            <button class="form-btn" type="submit">Submit</button>
+        </form>
+        <a href="/records" class="back-link">← Back to Records</a>
+    </div>
+
+</body>
+</html>
