@@ -2,7 +2,7 @@
 
 A simple Node.js + Express.js + EJS application to manage student records with RESTful routing.
 
-## 📌 Features
+##  Features
 
 - View all student records in a tabular format
 - Add new student records via form
@@ -11,7 +11,7 @@ A simple Node.js + Express.js + EJS application to manage student records with R
 - Delete a student record
 - Styled UI using custom CSS
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Node.js
 - Express.js

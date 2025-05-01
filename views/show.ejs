@@ -13,12 +13,12 @@
                 <!-- Buttons -->
                 <div class="action-buttons">
                    
-                    <form method="post" action="/records/<%= record.id %>/edit">
+                    <form method="post" action="/records/<%= record._id %>/edit">
                         <button class="btn edit-btn">Edit</button>
                     </form>
         
                
-                    <form method="post" action="/records/<%= record.id %>?_method=DELETE">
+                    <form method="post" action="/records/<%= record._id %>?_method=DELETE">
                         <button class="btn delete-btn" onclick="return confirm('Are you sure you want to delete this record?');">Delete</button>
                     </form>
                 </div>

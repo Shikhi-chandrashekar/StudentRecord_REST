@@ -1,11 +1,11 @@
 <%- include("includes/head.ejs") %>
 
-<body>
+
     <body class="form-body">
         <div class="form-container">
             <h2>Edit Record</h2>
-            <form  action="/records/<%= record.id %>?_method=PATCH" method="POST">
-                <input type="text" name="name" placeholder="Name"  />
+            <form  action="/records/<%= record._id %>?_method=PATCH" method="POST">
+                <!-- <input type="text" name="name" placeholder="Name"  />
                 <input type="number" name="usn" placeholder="USN"  />
                 <input type="email" name="email" placeholder="Email"  />
                 <input type="number" name="marks" placeholder="Marks"  />
@@ -13,7 +13,19 @@
                     <option value="" disabled selected>Select Status</option>
                     <option value="pass">Pass</option>
                     <option value="fail">Fail</option>
-                </select>
+                </select> -->
+
+
+                <input type="text" name="name" placeholder="Name" value="<%= record.name %>" />
+<input type="number" name="usn" placeholder="USN" value="<%= record.usn %>" />
+<input type="email" name="email" placeholder="Email" value="<%= record.email %>" />
+<input type="number" name="marks" placeholder="Marks" value="<%= record.marks %>" />
+<select name="status">
+    <option disabled selected>Select Status</option>
+    <option value="pass" <%= record.status === "pass" ? "selected" : "" %>>Pass</option>
+    <option value="fail" <%= record.status === "fail" ? "selected" : "" %>>Fail</option>
+</select>
+
                 <button class="form-btn" type="submit">Submit</button>
             </form>
             <a href="/records" class="back-link">← Back to Records</a>
@@ -21,5 +33,5 @@
 
 
     </body>
-</body>
+
 </html>
